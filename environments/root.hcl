@@ -1,7 +1,12 @@
+# Global values for all of my modules.
+# Inherited by environments terragrunt files.
+
 locals {
   aws_region        = "eu-west-2"
   state_bucket_name = "terragrunt-slock-demo"
 }
+
+# Dynamically generate the state file dependent on which environment/module we are deploying.
 
 remote_state {
   backend = "s3"
@@ -16,6 +21,8 @@ remote_state {
     if_exists = "overwrite"
   }
 }
+
+# Create a provider if not created.
 
 generate "provider" {
   path = "provider.tf"

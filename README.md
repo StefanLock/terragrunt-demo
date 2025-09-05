@@ -2,7 +2,7 @@
 
 This is a basic example of using terragrunt and the a small boilerplate template of how I like to setup up terraform.
 
-This is for demonstration purposes.
+This is for demonstration purposes. The focus is the structure of the repo and not the Terraform code itself.
 
 _Note: Normally I would have the modules in a terraform registry so that I can pin the module version._
 
